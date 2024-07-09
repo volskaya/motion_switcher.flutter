@@ -1,0 +1,71 @@
+name: app
+description: "Example project for motion_switcher package."
+version: 1.0.0+1
+
+environment:
+  sdk: ">=3.2.6 <4.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  auto_route: ^8.2.0
+  cupertino_icons: ^1.0.2
+  flutter_bloc: ^8.1.3
+  flutter_dotenv: ^5.1.0
+  flutter_hooks: ^0.20.5
+  freezed_annotation: ^2.4.1
+  get_it: ^7.6.7
+  injectable: ^2.3.2
+  json_annotation: ^4.8.1
+  logger: ^2.0.2+1
+  page_controller_listenable: ^0.0.3
+  password_strength: ^0.2.0
+  provider: ^6.1.1
+  quiver: ^3.2.1
+
+  motion_switcher:
+    path: ../
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+  auto_route_generator: ^8.0.0
+  build_runner: ^2.4.8
+  flutter_lints: ^4.0.0
+  freezed: ^2.4.7
+  injectable_generator: ^2.4.1
+  json_serializable: ^6.7.1
+
+flutter:
+  uses-material-design: true
+
+  assets:
+    - configs/
+    - assets/images/shoes/
+
+  fonts:
+    - family: Kanit
+      fonts:
+        - asset: assets/fonts/kanit/Kanit-Black.ttf
+          style: normal
+          weight: 900
+        - asset: assets/fonts/kanit/Kanit-ExtraBold.ttf
+          style: normal
+          weight: 800
+        - asset: assets/fonts/kanit/Kanit-Bold.ttf
+          style: normal
+          weight: 700
+        - asset: assets/fonts/kanit/Kanit-SemiBold.ttf
+          style: normal
+          weight: 600
+        - asset: assets/fonts/kanit/Kanit-Medium.ttf
+          style: normal
+          weight: 500
+        - asset: assets/fonts/kanit/Kanit-Regular.ttf
+          style: normal
+          weight: 400
+        - asset: assets/fonts/kanit/Kanit-Light.ttf
+          style: normal
+          weight: 300

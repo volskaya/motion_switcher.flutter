@@ -1,0 +1,38 @@
+name: Bump and release a package
+
+on:
+  workflow_dispatch:
+    inputs:
+      type:
+        description: Type of the version bump.
+        required: true
+        options:
+          - patch
+          - minor
+          - major
+
+jobs:
+  bump:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          fetch-depth: 0 # We're generating a changelog off commit names.
+          ssh-key: ${{ secrets.SSH_PRIVATE_KEY }}
+
+      - uses: dart-lang/setup-dart@v1
+      - name: Get dart packages
+        run: |
+          dart pub global activate cider
+
+      - uses: taiki-e/install-action@git-cliff
+      - name: Call our bump script
+        run: scripts/bump ${{github.event.inputs.type}}
+
+      - uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          ssh-key: ${{secrets.SSH_PRIVATE_KEY}}
+          commit_message: ${{env.OUR_COMMIT_MESSAGE}}
+          tagging_message: ${{env.OUR_TAGGING_MESSAGE}}

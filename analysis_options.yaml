@@ -1,0 +1,20 @@
+include: package:flutter_lints/flutter.yaml
+
+linter:
+  rules:
+    - use_build_context_synchronously
+
+analyzer:
+  exclude:
+    - lib/**.g.dart
+    - lib/**.freezed.dart
+    - lib/l10n/**
+
+  strong-mode:
+    implicit-casts: false
+    implicit-dynamic: true
+
+  errors:
+    todo: ignore
+    unused_element: ignore
+    curly_braces_in_flow_control_structures: ignore

@@ -1,0 +1,18 @@
+name: motion_switcher
+description: Motion animations for widgets and images.
+version: 0.0.1
+homepage: https://github.com/volskaya/motion_switcher.flutter
+
+environment:
+  sdk: ">=3.2.6 <4.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  sliver_tools: ^0.2.0
+  other_animations: ^0.0.2
+  await_route: ^0.0.1
+
+dev_dependencies:
+  flutter_lints:
