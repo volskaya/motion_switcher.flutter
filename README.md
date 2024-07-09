@@ -4,6 +4,8 @@ This package includes multiple, very easy to use widgets to wrap your own widget
 
 The animations are implicit and don't require you to create your own states or choreography.
 
+<image width="230" src="https://github.com/volskaya/motion_switcher.flutter/assets/38878482/b54c2c3d-7c7a-4607-9fb2-3c172f3ec88e"/>
+
 # ✨ Widgets
 
 - **MotionSwitcher** - animates the switch between its child widgets, similar to `AnimatedSwitcher`.
